@@ -25,7 +25,7 @@
             <p>
                 Me llamo Omar, tengo 20 años y actualmente estoy cursando mi quinto semestre de Ingeniería en Sistemas Computacionales en la Escuela Superior de Cómputo del IPN. Tengo mucho interés en el área de análisis de imágenes por computadora y desarrollo web, además actualmente estoy en búsqueda de una oportunidad laboral que me ayude a crecer mucho más como desarrollador.
             </p>
-            <button class="btn btn-dark">Descargar CV</button>
+            <a href="/CV-OmarAguirreA.pdf" download class="btn btn-dark">Descargar CV</a>
           </div>
       </div>
   </section>
@@ -123,7 +123,7 @@ export default {
 .banner-picture{
     object-fit: cover;
     min-width: 100%;
-    max-height: 80vh;
+    max-height: 75vh;
 }
 .summing-up{
     /* background: turquoise; */
