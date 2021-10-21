@@ -4,25 +4,19 @@
           <i class="bi bi-list"></i>
       </div>
       <div class="nav">
-          <a href="#" class="item-nav active">Home</a>
-          <a href="#" class="item-nav">About me</a>
+          <router-link to="/" class="item-nav">Home</router-link>
+          <router-link to="/aboutme" class="item-nav">Aboutme</router-link>
+          <router-link to="/bar" class="item-nav">Go to Bar</router-link>          
           <!-- <a href="#" class="item-nav active">Portfolio</a>
           <a href="#" class="item-nav">Contact</a> -->
-          <ItemNav link="#" text="Portfolio" :active="activate_all" v-on:changeSelect="deactivateAll"/>
-          <ItemNav link="#" text="Contact" :active="activate_all" v-on:changeSelect="deactivateAll"/>
-          <ItemNav link="#" text="Other" :active="activate_all" v-on:changeSelect="deactivateAll"/>
       </div>
   </header>
 </template>
 
 <script>
-import ItemNav from './ItemNav.vue';
 
 export default {
   name: 'Presentation',
-  components: {
-      ItemNav,
-  },
   data: function () {
     return {
       activate_all: false,
@@ -76,7 +70,7 @@ export default {
     height: 2px;
     width: 100%;
     z-index: 6;
-    border-radius: 50%;
+    border-radius: 20%;
     background: azure;
     position: absolute;
     top: 49%;
