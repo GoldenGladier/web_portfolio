@@ -6,7 +6,7 @@
       <h1 class="title-section">Básica</h1>
 
       <div class="container">
-        <img src="https://lh3.googleusercontent.com/proxy/HeH2Cg0aYMpgvTZ94gcMeecebFPpX_prP7Q1iRlIuC4CK03jCK9iG1jSSSd8pZY3PfQT3ViSbcFT5jPP3lMj5OQJDDm64LqRl1EHM76CyoSIDZh8F_Kz8yv9" alt="Netza">
+        <img src="../assets/netza.jpg" alt="Netza">
         <div class="text">
       <h2>Primaria - Secundaria</h2>
       Curse mi formación primaria en una escuela llamada "General Lazaro Cárdenas", mi formación secundaria 
