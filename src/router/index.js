@@ -22,6 +22,11 @@ const routes = [
     path: '/criptography',
     name: 'Criptography',
     component: () => import('../views/criptography.vue')
+  },
+  {
+    path: '/academic',
+    name: 'Academic',
+    component: () => import('../views/Formation.vue')
   }
 ]
 

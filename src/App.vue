@@ -6,8 +6,9 @@
         </div>
         <div class="nav">
             <router-link to="/" class="item-nav">Home</router-link>
-            <router-link to="/criptography" class="item-nav">Criptografía</router-link>
             <router-link to="/aboutme" class="item-nav">Más de mi</router-link>
+            <router-link to="/academic" class="item-nav">Formación</router-link>
+            <router-link to="/criptography" class="item-nav">Criptografía</router-link>
             <router-link to="/#" class="item-nav">Mi llave pública</router-link>          
             <!-- <a href="#" class="item-nav active">Portfolio</a>
             <a href="#" class="item-nav">Contact</a> -->
