@@ -5,11 +5,19 @@
             <i class="bi bi-list"></i>
         </div>
         <div class="nav">
-            <router-link to="/" class="item-nav">Home</router-link>
+            <router-link to="/" class="item-nav">
+              <lord-icon
+                  src="https://cdn.lordicon.com/gmzxduhd.json"
+                  trigger="loop"
+                  colors="primary:#ffffff,secondary:#3877dc"
+                  style="width:250px;height:250px">
+              </lord-icon>            
+              Home
+            </router-link>
             <router-link to="/aboutme" class="item-nav">Más de mi</router-link>
             <router-link to="/academic" class="item-nav">Formación</router-link>
             <router-link to="/criptography" class="item-nav">Criptografía</router-link>
-            <router-link to="/#" class="item-nav">Mi llave pública</router-link>          
+            <a href="/public_key_Omar.rsa" target="_blank" class="item-nav">Mi llave pública</a>          
             <!-- <a href="#" class="item-nav active">Portfolio</a>
             <a href="#" class="item-nav">Contact</a> -->
         </div>
@@ -19,6 +27,11 @@
 </template>
 
 <style>
+/* -------- Fonts ------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+/* font-family: 'Open Sans Condensed', sans-serif; */
+/* ---------------------- */
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,6 +67,7 @@ body, *{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 .icon{
     font-size: 22pt;
@@ -67,11 +81,16 @@ body, *{
 .item-nav{
     display: block;
     writing-mode: vertical-rl;
-    padding: 15px 20px 15px 5px;
+    padding: 10px 10px 10px 5px;
     text-transform: uppercase;
     text-decoration: none;
     color: azure;
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14pt;
 }
 a.router-link-exact-active, .active{
     background: #3d4961;
@@ -86,6 +105,10 @@ a.router-link-exact-active::after, .active::after{
     background: azure;
     position: absolute;
     top: 49%;
-    margin-right: 10px;
+    margin-right: 115px;
+}
+.item-nav lord-icon{
+  width: 30pt !important;
+  height: 30pt !important;
 }
 </style>
