@@ -25,7 +25,7 @@
             <p>
                 Me llamo Omar, tengo 20 años y actualmente estoy cursando mi quinto semestre de Ingeniería en Sistemas Computacionales en la Escuela Superior de Cómputo del IPN. Tengo mucho interés en el área de análisis de imágenes por computadora y desarrollo web, además actualmente estoy en búsqueda de una oportunidad laboral que me ayude a crecer mucho más como desarrollador.
             </p>
-            <a href="/CV-OmarAguirreA.pdf" download target="_blank" class="btn btn-dark">Descargar CV</a>
+            <a href="/CV-OmarAguirreA.pdf" target="_blank" class="btn btn-dark">Descargar CV</a>
           </div>
       </div>
   </section>
