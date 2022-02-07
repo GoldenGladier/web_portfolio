@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header class="menu">
+    <!-- <header class="menu">
         <div class="icon">
             <i class="bi bi-list"></i>
         </div>
@@ -18,17 +18,30 @@
             <router-link to="/academic" class="item-nav">Formación</router-link>
             <router-link to="/criptography" class="item-nav">Criptografía</router-link>
             <a href="/public_key_Omar.rsa" download class="item-nav">Mi llave pública</a>          
-            <!-- <a href="#" class="item-nav active">Portfolio</a>
-            <a href="#" class="item-nav">Contact</a> -->
         </div>
-    </header>
+    </header> -->
     <router-view/>
+    <Skills />
+    <Projects />
   </div>
 </template>
 
+<script>
+import Skills from './components/Skills.vue';
+import Projects from './components/Projects.vue';
+
+export default {
+  name: 'App',
+  components : {
+    Skills,
+    Projects,
+  },
+}
+</script>
+
 <style>
 /* -------- Fonts ------- */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 /* font-family: 'Open Sans Condensed', sans-serif; */
 /* ---------------------- */
 
