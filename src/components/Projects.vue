@@ -1,5 +1,5 @@
 <template>
-    <section class="projects">
+    <section class="projects" id="selected-projects">
       <h2>Proyectos Selectos</h2>
       <div class="projects-list">
 

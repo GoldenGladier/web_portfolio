@@ -1,5 +1,5 @@
 <template>
-    <section class="skills">
+    <section class="skills" id="skills">
       <h2>Skills</h2>
       <div class="skills-list">
         <SkillBar skill_name="HTML 5" skill_level="80"/>            

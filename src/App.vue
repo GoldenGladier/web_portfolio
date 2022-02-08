@@ -20,21 +20,30 @@
             <a href="/public_key_Omar.rsa" download class="item-nav">Mi llave pública</a>          
         </div>
     </header> -->
-    <router-view/>
+    <!-- <router-view/> -->
+    <Home />
+    <Navbar />
     <Skills />
     <Projects />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Navbar from './components/Nav.vue';
+import Home from './components/Home.vue';
 import Skills from './components/Skills.vue';
 import Projects from './components/Projects.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components : {
+    Navbar,
+    Home,
     Skills,
     Projects,
+    Footer,
   },
 }
 </script>
@@ -43,7 +52,19 @@ export default {
 /* -------- Fonts ------- */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 /* font-family: 'Open Sans Condensed', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Fuggles&display=swap');
+/* font-family: 'Fuggles', cursive;  */
+@import url('https://fonts.googleapis.com/css2?family=Abel');
+/* font-family: 'Abel', sans-serif; */
 /* ---------------------- */
+
+/* ----- Global variables ----- */
+:root {
+  --color-background-blue: #0D4497;
+  --color-font-main-light: azure;
+  --color-font-secondary-light: #D1D1D1;
+}
+/* ---------------------------- */
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -57,71 +78,4 @@ body, *{
   padding: 0;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-.menu{
-    background: #313B4D;
-    color: azure;
-    position: fixed;
-    height: 100vh;
-    z-index: 5;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-.icon{
-    font-size: 22pt;
-    position: absolute;
-    top: 15px;
-}
-.nav{
-    padding-left: 20px;
-    overflow: hidden;
-}
-.item-nav{
-    display: block;
-    writing-mode: vertical-rl;
-    padding: 10px 10px 10px 5px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: azure;
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14pt;
-}
-a.router-link-exact-active, .active{
-    background: #3d4961;
-}
-a.router-link-exact-active::after, .active::after{
-    content: "";
-    display: block;
-    height: 2px;
-    width: 100%;
-    z-index: 6;
-    border-radius: 20%;
-    background: azure;
-    position: absolute;
-    top: 49%;
-    margin-right: 115px;
-}
-.item-nav lord-icon{
-  width: 30pt !important;
-  height: 30pt !important;
-}
 </style>

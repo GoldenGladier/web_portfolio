@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import NavScroll from 'navscroll';
+Vue.use(NavScroll);
 
 Vue.config.productionTip = false
 

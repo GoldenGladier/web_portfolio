@@ -11,16 +11,27 @@
                 <a href="#" class="button btn-view-project">Visitar proyecto</a>
             </div> -->
                 
-            <div class="info-dropdown" v-if="info_dropdown">
-                <button class="btn-none" @click="handleDropdown"><i class="bi bi-chevron-up"></i></button>
-                <p class="project-description">
-                    {{ project_description }}
-                </p>
-            </div>
+            <transition name="stretch" mode="out-in" appear>  
 
-            <div class="info-dropdown dropdown-inactive" v-else>
-                <button class="btn-none" @click="handleDropdown"><i class="bi bi-chevron-down"></i></button>
-            </div>            
+                <div class="info-dropdown" v-if="info_dropdown == true" key="dropdown-active">
+                    <button class="btn-none" @click="handleDropdown">
+                        <i class="bi bi-chevron-up"></i>
+                        Cerrar
+                    </button>
+                    <p class="project-description">
+                        {{ project_description }}
+                    </p>
+                </div>
+
+                <div class="info-dropdown dropdown-inactive" v-else key="dropdown-inactive">
+                    <button class="btn-none" @click="handleDropdown">
+                        Detalles
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div> 
+
+            </transition>   
+
         </div>
     </div>
 </template>
@@ -65,6 +76,8 @@ export default {
 
 img.project-banner{
     width: 100%;
+    position: relative;
+    z-index: 5;
 }
 
 .info-fixed{
@@ -78,10 +91,11 @@ img.project-banner{
 
 .project-name{
   font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: bold;
+  font-weight: lighter;
   text-decoration: none;
   color: #313B4D;
   font-size: 20pt;
+  z-index: 100;
 }
 
 .info-fixed .project-name{
@@ -104,19 +118,28 @@ img.project-banner{
 }
 
 .info-dropdown .project-description{
-    /* margin-top: 1rem; */
-    text-align: justify;
     padding: 20px;
     padding-top: 0;
+
+    font-family: 'Abel', sans-serif;
+    font-size: 13pt;
+    text-align: justify;
 }
 
 .btn-none{
-    padding: 10px 15px;
+    padding: 5px 15px;
+    padding-bottom: 0;
     margin: 0;
     cursor: pointer;
     font-size: 15pt;
     background: transparent;
     border: none;
+
+    display: inline-grid;
+
+    color: var(--color-font-secondary-light);
+    font-size: 12pt;    
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .dropdown-inactive .btn-none{
@@ -124,24 +147,51 @@ img.project-banner{
     padding-bottom: 0;
 }
 
+.btn-none i{
+  animation: pulse 1.5s infinite linear;
+}
+
+/* Animation Project */
+.stretch-enter-active {
+  animation: stretch-in .5s;
+}
+.stretch-leave-active {
+  animation: stretch-in reverse .5s;
+}
+
+@keyframes stretch-in {
+  0% {
+    transform: translateY(-100%);
+  }
+  20%{
+    transform: translateY(-45%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.diffuse-enter-active {
+  animation: diffuse 1s ease-in reverse;
+}
+
 @keyframes pulse{
     0%{
         transform: scale(1);
     }
+    25%{
+        transform: scale(0.8);
+    }
     50%{
-        transform: scale(2);
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.3);
     }
     100%{
         transform: scale(1);
     }
 }
-
-.btn-none i{
-  animation-duration: 1s;
-  animation-name: pulse !important;
-  animation-iteration-count: infinite;
-}
-
 
 </style>
 
